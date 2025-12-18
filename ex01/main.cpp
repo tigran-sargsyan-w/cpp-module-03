@@ -1,32 +1,25 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-/**
- * @brief Main function.
- * Tests the functionality of the ClapTrap class.
- * @return 0 on success.
- */
 int	main(void)
 {
+	std::cout << "\n--- ClapTrap basic ---\n";
 	ClapTrap a("A");
-	ClapTrap b("B");
-
 	a.attack("dummy");
-	b.takeDamage(3);
-	b.beRepaired(2);
+	a.takeDamage(3);
+	a.beRepaired(2);
 
-	b.takeDamage(100);
-	b.attack("someone");
-	b.beRepaired(5);
+	std::cout << "\n--- ScavTrap chaining ---\n";
+	ScavTrap b("B");
+	b.attack("intruder");
+	b.takeDamage(30);
+	b.beRepaired(10);
+	b.guardGate();
 
-	std::cout << "\n--- Energy drain test ---\n";
-	ClapTrap c("C");
-	for (int i = 0; i < 11; ++i)
+	std::cout << "\n--- Energy drain (ScavTrap) ---\n";
+	ScavTrap c("C");
+	for (int i = 0; i < 55; ++i)
 		c.attack("wall");
 
-	std::cout << "\n--- Copy test ---\n";
-	ClapTrap d(c);
-	ClapTrap e("E");
-	e = a;
-
-	return (0);
+	return 0;
 }
