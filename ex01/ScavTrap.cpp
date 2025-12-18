@@ -38,13 +38,13 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 /**
  * @brief Assignment operator for ScavTrap
  * Assigns the values of another ScavTrap to this one.
- * @param rhs - The ScavTrap object to assign from
+ * @param other - The ScavTrap object to assign from
  * @return Reference to the current object
  */
-ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 {
-	if (this != &rhs)
-		ClapTrap::operator=(rhs);
+	if (this != &other)
+		ClapTrap::operator=(other);
 	std::cout << "ScavTrap assignment operator called (" << name << ")\n";
 	return (*this);
 }
