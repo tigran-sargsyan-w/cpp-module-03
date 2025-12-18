@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 /**
  * @brief Main entry point
@@ -21,10 +22,12 @@ int	main(void)
 	b.beRepaired(10);
 	b.guardGate();
 
-	std::cout << "\n--- Energy drain (ScavTrap) ---\n";
-	ScavTrap c("C");
-	for (int i = 0; i < 55; ++i)
-		c.attack("wall");
+	std::cout << "\n--- FragTrap chaining ---\n";
+	FragTrap c("C");
+	c.attack("enemy");
+	c.takeDamage(20);
+	c.beRepaired(15);
+	c.highFivesGuys();
 
 	return 0;
 }
