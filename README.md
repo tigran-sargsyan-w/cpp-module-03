@@ -307,7 +307,7 @@ class Warrior : Human {};
 
 ---
 
-## 1) `virtual` (methods) — **polymorphism** 🎭
+### 1) `virtual` (methods) — **polymorphism** 🎭
 
 If a base method is `virtual`, a call through `Base&` / `Base*` will dispatch to the derived override.
 
@@ -327,7 +327,7 @@ public:
 
 ---
 
-## 2) `override` — **compile-time check that you really override** ✅
+### 2) `override` — **compile-time check that you really override** ✅
 
 ```cpp
 void speak() override;
@@ -337,7 +337,7 @@ If the signature doesn’t match exactly (params, `const`, refs, etc.), you get 
 
 ---
 
-## 3) `final` — **prevent inheritance / prevent further overrides** 🧱
+### 3) `final` — **prevent inheritance / prevent further overrides** 🧱
 
 ### Class can’t be inherited:
 
@@ -356,7 +356,7 @@ public:
 
 ---
 
-## 4) `virtual` destructor — **safe delete via base pointer** 🧨
+### 4) `virtual` destructor — **safe delete via base pointer** 🧨
 
 If you have polymorphism (virtual methods) and you might do `delete basePtr;`, the base destructor should almost always be `virtual`.
 
@@ -379,7 +379,7 @@ Without `virtual ~Base()` you risk only `~Base()` being called.
 
 ---
 
-## 5) `protected` — **visible to derived classes, hidden from outside** 🛡️
+### 5) `protected` — **visible to derived classes, hidden from outside** 🛡️
 
 ```cpp
 class Base {
@@ -392,7 +392,7 @@ protected:
 
 ---
 
-## 6) `using Base::method;` — **keep overloads visible / selectively re-export** 🔎
+### 6) `using Base::method;` — **keep overloads visible / selectively re-export** 🔎
 
 A derived method with the same name can hide base overloads (name hiding).
 
@@ -415,7 +415,7 @@ Also handy with `private` inheritance: you can expose only specific base methods
 
 ---
 
-## 7) `explicit` (constructors) — **block implicit conversions** 🚫
+### 7) `explicit` (constructors) — **block implicit conversions** 🚫
 
 ```cpp
 class Money {
@@ -429,7 +429,7 @@ Money m2(42);   // ✅ allowed
 
 ---
 
-## 8) `= delete` / `= default` — **control copy/assignment** 🧰
+### 8) `= delete` / `= default` — **control copy/assignment** 🧰
 
 ```cpp
 class Base {
@@ -445,7 +445,7 @@ public:
 
 ---
 
-## 9) `Base::method()` — **explicitly call the base version** 🎯
+### 9) `Base::method()` — **explicitly call the base version** 🎯
 
 Useful with overriding / multiple inheritance.
 
@@ -458,7 +458,7 @@ void Der::attack(const std::string& target)
 
 ---
 
-## Tiny reminder: `virtual` has 2 different meanings in C++ ⚠️
+### Tiny reminder: `virtual` has 2 different meanings in C++ ⚠️
 
 * `virtual` **on methods** → polymorphism (`override` / `final`)
 * `virtual` **in inheritance** (`class A : virtual public B`) → a single shared base in the “diamond”
