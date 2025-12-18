@@ -1,5 +1,10 @@
 #include "ClapTrap.hpp"
 
+/**
+ * @brief Main function.
+ * Tests the functionality of the ClapTrap class.
+ * @return 0 on success.
+ */
 int	main(void)
 {
 	ClapTrap a("A");
