@@ -345,7 +345,7 @@ public:
 ### 🧠 When to use
 
 * Rare
-* You want to **hide “is-a” from outside**, but keep base for derived classes
+* You want to **hide “is-a” from outside**, but but keep the base accessible for subclasses.
 
 ---
 
