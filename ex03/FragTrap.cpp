@@ -59,28 +59,6 @@ FragTrap::~FragTrap()
 }
 
 /**
- * @brief Attacks a target.
- * Specialized attack for FragTrap. Consumes 1 energy point.
- * @param target - The name of the target to attack.
- */
-void FragTrap::attack(const std::string& target)
-{
-    if (hitPoints == 0)
-    {
-        std::cout << "FragTrap " << name << " can't attack (no hit points left)\n";
-        return;
-    }
-    if (energyPoints == 0)
-    {
-        std::cout << "FragTrap " << name << " can't attack (no energy points left)\n";
-        return;
-    }
-    energyPoints--;
-    std::cout << "FragTrap " << name << " attacks " << target
-              << ", causing " << attackDamage << " points of damage!\n";
-}
-
-/**
  * @brief Requests a positive high five.
  * Prints a message indicating the FragTrap is requesting a high five.
  */
