@@ -4,7 +4,7 @@
 
 /**
  * @brief Main entry point
- * Demonstrates the functionality of ClapTrap and ScavTrap.
+ * Demonstrates the functionality of ClapTrap, ScavTrap and FragTrap classes.
  * @return 0 on success
  */
 int	main(void)
