@@ -262,13 +262,13 @@ cpp-module-03/
 
 ---
 
-## 1) `public` — **“Warrior IS a Human”** ✅
+### 1) `public` — **“Warrior IS a Human”** ✅
 
 ```cpp
 class Warrior : public Human {};
 ```
 
-### ✅ What works (outside code)
+#### ✅ What works (outside code)
 
 ```cpp
 void greet(Human& h);
@@ -279,20 +279,20 @@ Human* p = &w;   // ✅ OK
 Human& r = w;    // ✅ OK
 ```
 
-### 🧠 When to use
+#### 🧠 When to use
 
 * Classic OOP **is-a** relationship
 * Typical for school exercises (`ScavTrap` is-a `ClapTrap`)
 
 ---
 
-## 2) `protected` — **“Outside: NOT Human, but for subclasses: yes”**
+### 2) `protected` — **“Outside: NOT Human, but for subclasses: yes”**
 
 ```cpp
 class Warrior : protected Human {};
 ```
 
-### ❌ Forbidden (outside code)
+#### ❌ Forbidden (outside code)
 
 ```cpp
 void greet(Human& h);
@@ -303,7 +303,7 @@ Human* p = &w;   // ❌ ERROR
 Human& r = w;    // ❌ ERROR
 ```
 
-### ✅ What you *can* do
+#### ✅ What you *can* do
 
 #### 1) Use `Warrior` as its own type
 
@@ -349,7 +349,7 @@ public:
 
 ---
 
-## 3) `private` — **“Warrior is NOT Human; it just uses Human internally”** 🔒
+### 3) `private` — **“Warrior is NOT Human; it just uses Human internally”** 🔒
 
 ```cpp
 class Warrior : private Human {};
@@ -357,7 +357,7 @@ class Warrior : private Human {};
 class Warrior : Human {}; // ❗ private inheritance by default
 ```
 
-### ❌ Forbidden (outside code)
+#### ❌ Forbidden (outside code)
 
 ```cpp
 void greet(Human& h);
@@ -368,7 +368,7 @@ Human* p = &w;   // ❌ ERROR
 Human& r = w;    // ❌ ERROR
 ```
 
-### ❌ Forbidden (even for subclasses of `Warrior`)
+#### ❌ Forbidden (even for subclasses of `Warrior`)
 
 ```cpp
 class EliteWarrior : public Warrior
@@ -430,7 +430,7 @@ public:
 
 ---
 
-## Default rule (VERY IMPORTANT) ⚠️
+### Default rule (VERY IMPORTANT) ⚠️
 
 ```cpp
 class A : B {};   // = private inheritance (default)
@@ -439,7 +439,7 @@ struct A : B {};  // = public inheritance (default)
 
 ---
 
-## Ultra-short summary
+### Ultra-short summary
 
 * `public`    → **IS-A**
 * `protected` → **IS-A only for subclasses**
