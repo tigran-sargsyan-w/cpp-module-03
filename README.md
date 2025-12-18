@@ -339,13 +339,13 @@ If the signature doesn’t match exactly (params, `const`, refs, etc.), you get 
 
 ### 3) `final` — **prevent inheritance / prevent further overrides** 🧱
 
-### Class can’t be inherited:
+#### Class can’t be inherited:
 
 ```cpp
 class Boss final {};
 ```
 
-### Method can’t be overridden further:
+#### Method can’t be overridden further:
 
 ```cpp
 class Base {
