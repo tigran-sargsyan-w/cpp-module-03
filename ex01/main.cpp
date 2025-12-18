@@ -1,6 +1,11 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
+/**
+ * @brief Main entry point
+ * Demonstrates the functionality of ClapTrap and ScavTrap.
+ * @return 0 on success
+ */
 int	main(void)
 {
 	std::cout << "\n--- ClapTrap basic ---\n";
