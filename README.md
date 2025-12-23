@@ -1,8 +1,8 @@
 # C++ Module 03 – Inheritance & Diamond Problem 🧬💎
 
-✅ **Status**: Completed – all exercises
-
-🏫 **School**: 42 – C++ Modules (Module 03)
+✅ **Status**: Completed – all exercises  
+🏫 **School**: 42 – C++ Modules (Module 03)  
+🏅 **Score**: 100/100
 
 > *Single inheritance, multiple inheritance, method overriding, base/derived behavior, and the classic “diamond” problem.*
 
